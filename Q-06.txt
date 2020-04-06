@@ -1,0 +1,86 @@
+#******************* Question - : 20-22 :  ********************
+
+
+df1 = df[df.Period == "2011-2012"]
+print("\n\n--------------[ OUTPUT for 2011-2012  ]----------------------\n\n")
+print(df1[['Location','Period','First Tooltip']])
+
+df2 = df[df.Period == "2011-2013"]
+print("\n\n--------------[ OUTPUT for 2011-2013 ]----------------------\n\n")
+print(df2[['Location','Period','First Tooltip']])
+
+df3 = df[df.Period == "2012"]
+print("\n\n--------------[ OUTPUT for 2012 ]----------------------\n\n")
+print(df3[['Location','Period','First Tooltip']])
+
+
+i = np.arange(len(df1['Location']))
+print(i)
+
+i1 = np.arange(len(df2['Location']))
+print(i1)
+
+i2 = np.arange(len(df3['Location']))
+print(i2)
+
+
+#--------------- plot for slot-20-22 ----------------------
+
+plt.title('Question - : slot-6')
+plt.xlabel("Country sl. no --- >")
+plt.ylabel("Number(%) --- >")
+
+plt.plot(i,df1['First Tooltip'],
+            marker=7,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] 2011-2012 ")
+
+plt.plot(i1,df2['First Tooltip'],
+            marker='*',
+            markersize=10,
+            linestyle='dashed',
+            label="[2] 2011-2013")
+
+plt.plot(i2,df3['First Tooltip'],
+            marker='+',
+            markersize=10,
+            linestyle='dashed',
+            label="[3] 2012")
+
+plt.legend()
+plt.show()
+
+
+--------------[ OUTPUT for 2011-2012  ]----------------------
+
+
+    Location     Period  First Tooltip
+151     Fiji  2011-2012          100.0
+
+
+--------------[ OUTPUT for 2011-2013 ]----------------------
+
+
+                             Location     Period  First Tooltip
+123                          Dominica  2011-2013         100.00
+196                          Honduras  2011-2013          16.98
+246                        Kyrgyzstan  2011-2013          96.06
+279                         Mauritius  2011-2013          99.97
+358               Republic of Moldova  2011-2013          90.47
+384  Saint Vincent and the Grenadines  2011-2013         100.00
+461                            Turkey  2011-2013          78.25
+
+
+--------------[ OUTPUT for 2012 ]----------------------
+
+
+                Location Period  First Tooltip
+5    Antigua and Barbuda   2012          79.28
+233           Kazakhstan   2012          90.83
+291             Mongolia   2012          91.63
+390         Saudi Arabia   2012          50.64
+
+[0]
+[0 1 2 3 4 5 6]
+[0 1 2 3]
